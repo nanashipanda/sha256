@@ -7,7 +7,7 @@
 #define dss0(x) (rotr((x),2))^(rotr((x),13))^(rotr((x),22))
 #define dss1(x) (rotr((x),6))^(rotr((x),11))^(rotr((x),25))
 #define MAJ(x,y,z) ((x) & (y)) ^ ((x) & (z)) ^ ((y) & (z));
-#define CH(x, y, z) (x & y) ^ ((~x) & z);
+#define CH(x, y, z) ((x) & (y)) ^ ((~(x)) & (z));
  
 int main(void){
     struct timeval start_time, now;
